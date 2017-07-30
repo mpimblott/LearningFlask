@@ -23,6 +23,6 @@ def login():
     return render_template('login.html', error=error)
 
 
-def startup():
+def startup(environ, start_response):
     app.run()
 
