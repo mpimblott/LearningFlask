@@ -23,6 +23,6 @@ def login():
     return render_template('login.html', error=error)
 
 
-def startup(environ, start_response):
+if __name__ == "__main__":
     app.run()
 
