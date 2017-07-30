@@ -1,10 +1,15 @@
-from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for, request, send_from_directory
 app = Flask(__name__)
 
 
 @app.route('/')
 def main():
-    return render_template('template.html', my_string="Wheeeee!", my_list=[0, 1, 2, 3, 4, 5])
+    return render_template('index.html')
+
+
+@app.route('/static/<path:path>')
+def send_js(path):
+    return send_from_directory('public/', path)
 
 
 @app.route('/hello/')
