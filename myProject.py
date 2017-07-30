@@ -1,13 +1,13 @@
-from flask import Flask, render_template, redirect, url_for, request, send_from_directory
+from flask import Flask, render_template, redirect, url_for, request # send_from_directory
 app = Flask(__name__)
 
 
 @app.route('/')
 def main():
-    return render_template('login.html')
+    return redirect(url_for('login'))
 
 
-@app.route('/hello/')
+@app.route('/hello')
 def hello():
     return render_template('template.html', my_string="Go away!", my_list=[0, 1, 2, 3, 4, 5])
 
