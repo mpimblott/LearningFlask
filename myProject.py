@@ -2,6 +2,21 @@ from flask import Flask, render_template, redirect, url_for, request, session, a
 import os
 app = Flask(__name__, static_url_path='/static')
 
+user_dictionary = {"Matthew": "crossbow"}
+
+
+def authenticate(login_username, login_password):
+    if user_dictionary.get(login_username) is None:
+        return False
+        print("invalid username or password")
+    elif user_dictionary.get(login_username) == login_password:
+        print(user_dictionary.get(login_username))
+        print("welcome back")
+        return True
+    else:
+        return False
+        print("invalid username or password")
+
 
 @app.route('/')
 def home():
@@ -11,22 +26,12 @@ def home():
         return render_template('index.html')
 
 
-@app.route('/hello')
-def hello():
-    return render_template('test', my_string="Go away!", my_list=[0, 1, 2, 3, 4, 5])
-
-
-@app.route('/boot')
-def boot():
-    return render_template('boot.html', my_string="Go away!", my_list=[0, 1, 2, 3, 4, 5])
-
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     error = None
     if request.method == 'POST':
         if not session.get('logged_in'):
-            if request.form['username'] != 'admin' or request.form['password'] != 'admin':
+            if not authenticate(request.form['username'], request.form['password']):
                 error = 'Invalid Credentials. Please try again.'
             else:
                 session['logged_in'] = True
