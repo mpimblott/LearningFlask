@@ -13,6 +13,10 @@ body {
   background-color: #3366ff;
 }
 
+.stars-background {
+  background-image: url("/static/images/login_background.jpeg");
+}
+
 .form-signin {
   max-width: 330px;
   padding: 15px;

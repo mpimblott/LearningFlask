@@ -5,14 +5,18 @@ from datetime import datetime
 class Account(object):
     name = ""
     password = ""
-    permissions = 1
+    is_admin = False
+
+    def toJSON(self):
+        return json.dumps(self, default=lambda o: o.__dict__,
+                          sort_keys=True, indent=4)
 
 
-def create_account(name, password, permissions):
+def create_account(name, password, is_admin):
     account = Account()
     account.name = name
     account.password = password
-    account.permissions = permissions
+    account.is_admin = is_admin
     account.creation_date = datetime.now().date()
     return account
 

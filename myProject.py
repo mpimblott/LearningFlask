@@ -1,10 +1,11 @@
 from flask import Flask, render_template, redirect, url_for, request, session  # abort # send_from_directory
+from functools import wraps
 import os
 import accounts
 
 app = Flask(__name__, static_url_path='/static')
 
-user = accounts.create_account("Matthew", "password", "1")
+user = accounts.create_account("Matthew", "password", False)
 
 user_dictionary = {"Matthew": user}
 
@@ -13,33 +14,46 @@ user_dictionary = {"Matthew": user}
 def authenticate(login_username, login_password):
     account = user_dictionary.get(login_username)
     if account is None:
-        return False
+        return None
         print("invalid username")
     elif account.password == login_password:
         print("welcome back")
-        session['username'] = login_username
-        print("username: ", session['username'])
-        return True
+        print("username: ", account.name)
+        return account
     else:
-        return False
+        return None
         print("Invalid password")
 
 
-def logged_in():
-    if not session.get('logged_in'):
-        return redirect(url_for('login'))
-    else:
-        return True
+# Decorator Function to check for login
+def login_required(something):
+    @wraps(something)
+    def wrap(*args, **kwargs):
+        if session.get('logged_in'):
+            return something(*args, **kwargs)
+        else:
+            return redirect(url_for("login"))
+    return wrap
 
+
+# Decorator Function to check for login for admin
+def admin_required(something):
+    @wraps(something)
+    def wrap(*args, **kwargs):
+        username = session.get('username')
+        account = user_dictionary.get(username)
+        if session.get('logged_in') and account.is_admin:
+            return something(*args, **kwargs)
+        else:
+            return redirect(url_for("login"))
+    return wrap
 
 
 # home page - redirects to login screen if not authenticated
 @app.route('/')
+@login_required
 def home():
-    if not session.get('logged_in'):
-        return redirect(url_for('login'))
-    else:
-        return render_template('index.html', user=session['username'])
+    return render_template('index.html', user=session['username'])
 
 
 # logout - changes session value and redirects to login page
@@ -55,10 +69,12 @@ def login():
     error = None
     if request.method == 'POST':
         if not session.get('logged_in'):
-            if not authenticate(request.form['username'], request.form['password']):
+            account = authenticate(request.form['username'], request.form['password'])
+            if account is None:
                 error = 'Invalid Credentials. Please try again.'
             else:
                 session['logged_in'] = True
+                session['username'] = account.name
                 return redirect(url_for('home'))
         else:
             return redirect(url_for('home'))
@@ -67,11 +83,9 @@ def login():
 
 
 @app.route('/admin')
+@admin_required
 def admin():
-    if not session.get('logged_in'):
-        return redirect(url_for('login'))
-    else:
-        return render_template('/admin.html')
+    return render_template('/admin.html')
 
 
 if __name__ == "__main__":
