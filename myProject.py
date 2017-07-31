@@ -25,6 +25,14 @@ def authenticate(login_username, login_password):
         print("Invalid password")
 
 
+def logged_in():
+    if not session.get('logged_in'):
+        return redirect(url_for('login'))
+    else:
+        return True
+
+
+
 # home page - redirects to login screen if not authenticated
 @app.route('/')
 def home():
@@ -58,9 +66,12 @@ def login():
     return render_template('/login.html', error=error)
 
 
-@app.route('/account')
-def account():
-    return render_template('/accountDashboard.html')
+@app.route('/admin')
+def admin():
+    if not session.get('logged_in'):
+        return redirect(url_for('login'))
+    else:
+        return render_template('/admin.html')
 
 
 if __name__ == "__main__":
