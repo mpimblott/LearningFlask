@@ -2,97 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2075a971-c469-45d9-8edb-a2d9ecbd5a48" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/carousel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/cover.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/signin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/boot.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sign_in.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/base.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/font-awesome/css/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/font-awesome/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/font-awesome/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/font-awesome/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/font-awesome/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/font-awesome/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/font-awesome/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/fonts.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/micons/fonts/icomoon.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/micons/fonts/icomoon.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/micons/fonts/icomoon.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/micons/fonts/icomoon.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/micons/micons.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/vendor.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/montserrat/montserrat-black-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/montserrat/montserrat-black-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/montserrat/montserrat-bold-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/montserrat/montserrat-bold-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/montserrat/montserrat-extrabold-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/montserrat/montserrat-extrabold-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/montserrat/montserrat-extralight-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/montserrat/montserrat-extralight-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/montserrat/montserrat-light-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/montserrat/montserrat-light-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/montserrat/montserrat-medium-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/montserrat/montserrat-medium-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/montserrat/montserrat-regular-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/montserrat/montserrat-regular-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/montserrat/montserrat-semibold-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/montserrat/montserrat-semibold-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/montserrat/montserrat-thin-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/montserrat/montserrat-thin-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-bold-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-bold-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-bolditalic-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-bolditalic-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-extrabold-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-extrabold-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-extrabolditalic-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-extrabolditalic-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-extralight-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-extralight-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-extralightitalic-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-extralightitalic-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-italic-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-italic-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-light-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-light-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-lightitalic-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-lightitalic-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-regular-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-regular-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-semibold-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-semibold-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-semibolditalic-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/muli/muli-semibolditalic-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/app-screens-1200.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/app-screens-2800.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/app-screens-600.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/appstore.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/avatars/user-01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/avatars/user-02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/avatars/user-03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/avatars/user-04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/avatars/user-05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/email-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/google-play.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/hero-bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/iphone-app-470.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/iphone-app-940.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/sample-image.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/shutterbug.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/jquery-2.1.3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/modernizr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/pace.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/plugins.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myProject.py" afterPath="$PROJECT_DIR$/myProject.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/login.html" afterPath="$PROJECT_DIR$/templates/login.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -421,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1501484788465</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="CSS working">
+      <created>1501490805057</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1501490805057</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
