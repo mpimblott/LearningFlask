@@ -15,7 +15,7 @@ def authenticate(login_username, login_password):
         return True
     else:
         return False
-        print("invalid username or password")
+        print("Invalid username or password")
 
 
 @app.route('/')
