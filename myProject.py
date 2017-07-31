@@ -1,21 +1,22 @@
-from flask import Flask, render_template, redirect, url_for, request, session, abort # send_from_directory
+from flask import Flask, render_template, redirect, url_for, request, session  # abort # send_from_directory
 import os
 app = Flask(__name__, static_url_path='/static')
 
-user_dictionary = {"Matthew": "crossbow"}
+user_dictionary = {"Matthew": "password"}
 
 
 def authenticate(login_username, login_password):
     if user_dictionary.get(login_username) is None:
         return False
-        print("invalid username or password")
+        print("invalid username")
     elif user_dictionary.get(login_username) == login_password:
-        print(user_dictionary.get(login_username))
         print("welcome back")
+        session['username'] = login_username
+        print("username: ", session['username'])
         return True
     else:
         return False
-        print("Invalid username or password")
+        print("Invalid password")
 
 
 @app.route('/')
@@ -23,7 +24,7 @@ def home():
     if not session.get('logged_in'):
         return redirect(url_for('login'))
     else:
-        return render_template('index.html')
+        return render_template('index.html', user=session['username'])
 
 
 @app.route('/login', methods=['GET', 'POST'])
