@@ -3,10 +3,11 @@
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-}*/
+  background-size: cover;*/
+}
 
 body {
+  /*background-image: url("/images/login_background.jpeg");*/
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #3366ff;
