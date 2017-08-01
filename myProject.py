@@ -82,10 +82,11 @@ def login():
 
 
 @app.route('/admin', methods=['GET', 'POST'])
-@admin_required
+# @admin_required
 def admin():
     if request.method == 'POST':
-        user_dictionary[request.form['createUsername']] = accounts.create_account(request.form['createUsername'], request.form['createPassword, False'])
+        user_dictionary[request.form['createUsername']] = accounts.create_account(request.form['createUsername'],
+                                                                                  request.form['createPassword, False'])
         print(user_dictionary)
 
     return render_template('/admin.html')
