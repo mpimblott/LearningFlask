@@ -93,6 +93,6 @@ def admin():
 
 
 if __name__ == "__main__":
-    app.secret_key = os.urandom(12)
+    app.secret_key = 6542365276218712567215614752147621766512839154125341267535124341623561261353714  # os.urandom(12)
     app.run()
 
