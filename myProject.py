@@ -5,7 +5,7 @@ import accounts
 
 app = Flask(__name__, static_url_path='/static')
 
-user = accounts.create_account("Matthew", "password", False)
+user = accounts.create_account("Matthew", "password", True)
 
 user_dictionary = {"Matthew": user}
 
@@ -17,7 +17,6 @@ def authenticate(login_username, login_password):
         return None
         print("invalid username")
     elif account.password == login_password:
-        print("welcome back")
         print("username: ", account.name)
         return account
     else:

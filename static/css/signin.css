@@ -10,12 +10,15 @@ body {
   /*background-image: url("/images/login_background.jpeg");*/
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #3366ff;
 }
 
 .stars-background {
-  background-image: url("/static/images/login_background.jpeg");
+  background-image: url("/static/images/forestBackground.jpeg");
+  background-color: #b3e6ff;
 }
+
+h2 { color: #fff;}
+h3 { color: #fff;}
 
 .form-signin {
   max-width: 330px;
