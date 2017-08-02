@@ -81,18 +81,36 @@ def login():
     return render_template('/login.html', error=error)
 
 
-@app.route('/admin', methods=['GET', 'POST'])
+# @app.route('/newaccount', methods=['GET', 'POST'])
 # @admin_required
+# def new_account():
+#     error = None
+#     if request.method == 'POST':
+#         user_dictionary[request.form['createUsername']] = accounts.create_account(request.form['createUsername'],
+#                                                                                 request.form['createPassword, False'])
+#         return redirect(url_for('admin'))
+#
+#     return render_template('/createAccount.html')
+
+
+@app.route('/notes')
+@login_required
+def notes():
+    return render_template('noteWall.html', user=session['username'])
+
+
+@app.route('/admin', methods=['GET', 'POST'])
+@admin_required
 def admin():
-    if request.method == 'POST':
-        user_dictionary[request.form['createUsername']] = accounts.create_account(request.form['createUsername'],
-                                                                                  request.form['createPassword, False'])
-        print(user_dictionary)
+    # if request.method == 'POST':
+    #     user_dictionary[request.form['createUsername']] = accounts.create_account(request.form['createUsername'],
+    #                                                                             request.form['createPassword, False'])
+    #     print(user_dictionary)
 
     return render_template('/admin.html')
 
 
 if __name__ == "__main__":
-    app.secret_key = 6542365276218712567215614752147621766512839154125341267535124341623561261353714  # os.urandom(12)
+    app.secret_key = os.urandom(12)
     app.run()
 
