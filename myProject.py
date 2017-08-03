@@ -50,7 +50,7 @@ def admin_required(something):
 
 # home page - redirects to login screen if not authenticated
 @app.route('/')
-# @login_required
+@login_required
 def home():
     return render_template('index.html', user=session['username'])
 
