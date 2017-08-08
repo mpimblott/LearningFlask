@@ -6,7 +6,6 @@ import accounts
 app = Flask(__name__, static_url_path='/static')
 
 user = accounts.create_account("Matthew", "password", True)
-
 user_dictionary = {"Matthew": user}
 
 
