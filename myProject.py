@@ -80,6 +80,12 @@ def login():
     return render_template('/login.html', error=error)
 
 
+@app.route('/cover')
+def cover():
+    session['logged_in'] = False
+    return render_template('/coverPage.html')
+
+
 # @app.route('/newaccount', methods=['GET', 'POST'])
 # @admin_required
 # def new_account():

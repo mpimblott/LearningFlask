@@ -9,13 +9,14 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Note Wall</title>
+    <title>Your Notes</title>
 
+    <link href="static/css/offcanvas.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link href="static/css/offcanvas.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -29,13 +30,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Project name</a>
+            <a class="navbar-brand" href="#">Account name</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/">Home</a></li>
                 <li><a href="#">Settings</a></li>
-                <li><a href="#">Profile</a></li>
+                <li><a href="#">Account</a></li>
                 <li><a href="/logout">Logout</a></li>
             </ul>
             <form class="navbar-form navbar-right">
@@ -56,6 +57,37 @@
           <div class="jumbotron">
             <h1>Your Notes</h1>
             <p>Here you can create, edit and read notes.</p>
+                    <!--<button type="button" class="btn btn-lg btn-primary" data-toggle="modal"
+                            data-target="#modalAddAccount">Add Account
+                    </button>-->
+                    <p><a type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#modalAddAccount" role="button">New Note</a></p>
+
+                </div>
+
+                <div class="modal fade" id="modalAddAccount" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal Popup for adding an account-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Add Note</h4>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Anything inside the popup should go in here -->
+                                <form action="" method="post">
+                                    <textarea rows="25" cols="10">Your note here.</textarea>
+                                </form>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Add</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+
           </div>
           <div class="row">
             <div class="col-6 col-lg-4">

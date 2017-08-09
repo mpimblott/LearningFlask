@@ -57,3 +57,20 @@ footer {
     width: 50%; /* 6 columns */
   }
 }
+
+
+textarea{
+  display:block;
+  box-sizing: padding-box;
+  overflow:hidden;
+  resize: none;
+  outline: none;
+
+  padding:10px;
+  width: 100%;
+  font-size:14px;
+  margin:50px auto;
+  border-radius:6px;
+  box-shadow:2px 2px 8px rgba(0,0,0,.3);
+  border:0;
+
