@@ -116,7 +116,7 @@ def admin():
 
 # This needs to be outside the main for Heroku as it uses
 # gunicorn to run so never runs the main
-app.secret_key = os.urandom(12)
+app.secret_key = os.urandom(50)
 app.config['SESSION_TYPE'] = 'filesystem'
 
 if __name__ == "__main__":

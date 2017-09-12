@@ -8,6 +8,10 @@ print(database_url)
 database = create_engine(database_url, echo=True)
 
 
+def edit_sql_test(db):
+    db.execute("INSERT INTO films (title, director, year) VALUES ('Doctor Strange', 'Scott Derrickson', '2016')")
+
+
 def sql_test(db):
     # Create
     db.execute("CREATE TABLE IF NOT EXISTS films (title text, director text, year text)")
@@ -23,7 +27,7 @@ def sql_test(db):
 
     # Delete
     db.execute("DELETE FROM films WHERE year='2016'")
-    db.execute("DROP TABLE IF EXISTS FILMS")
+    # db.execute("DROP TABLE IF EXISTS FILMS")
 
 
 def sql_expression_test(db):
@@ -57,7 +61,7 @@ def sql_expression_test(db):
         film_table.drop()
 
 
-sql_test(database)
+edit_sql_test(database)
 
 
-sql_expression_test(database)
+# sql_expression_test(database)
