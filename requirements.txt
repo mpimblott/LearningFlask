@@ -6,4 +6,4 @@ MarkupSafe==1.0
 Werkzeug==0.12.2
 gunicorn==19.7.1
 SQLalchemy==1.2.0b2
-psycopg2=2.7.3
+psycopg2==2.7.3
